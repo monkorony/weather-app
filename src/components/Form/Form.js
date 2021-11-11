@@ -2,12 +2,17 @@ import React from 'react';
 import styles from './Form.module.css';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({
+  forecastSubmit
+}) => {
   const [location, setLocation] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLocation('');
+    if (location && location !== '') {
+      forecastSubmit(location);
+      setLocation('');
+    }   
   }
 
   const handleLocationChange = (e) => {

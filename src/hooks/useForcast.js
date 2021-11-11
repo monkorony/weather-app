@@ -5,8 +5,13 @@ const useForecast = () => {
   const [isLoading, setLoading] = useState(false);
   const [forecast, setForecast] = useState(null);
 
+  //call api
+  const submitRequest = (location) => {
+    console.log(location)
+  }
+
   return {
-    isError, isLoading, forecast
+    isError, isLoading, forecast, submitRequest
   }
 }
 

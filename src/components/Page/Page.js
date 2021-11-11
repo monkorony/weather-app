@@ -8,15 +8,23 @@ import Forecast from '../Forecast/Forecast';
 import useForecast from '../../hooks/useForcast';
 
 const Page = () => {
-  const {isError, isLoading, forecast} = useForecast();
+  const {isError, isLoading, forecast, submitRequest} = useForecast();
+
+  const forecastSubmit = (locationInput) => {
+    submitRequest(locationInput);
+  }
   return (
     <div className='page-container'>
       <Header />
 
-      {!isLoading && <Form />}
+      {!isLoading && <Form 
+        forecastSubmit={forecastSubmit} 
+      />}
       { isError && <Error />}
       { isLoading && <Loader /> }
-      { forecast && <Forecast /> }
+      { forecast && <Forecast 
+        
+      /> }
       
     </div>
   )
