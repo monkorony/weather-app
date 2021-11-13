@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './CurrentDay.css';
 
 const CurrentDay = (
   { 
@@ -10,9 +11,20 @@ const CurrentDay = (
     weatherDescription 
   }
 ) => {
+  const cleanWeatherImg = weatherIcon.replace("'", '');
   return (
-    <div>
-      <div>{weekday}</div>
+    <div className='current-day'>
+      <h2>{weekday}</h2>
+      <h4>{date}</h4>
+      <div className='location-wrap'>
+        <div className='location'>&#9992; {location}</div>
+        <div className='temp'>
+          <div>{temperature}&deg;</div>
+          <img width="45" src={cleanWeatherImg} alt="" />
+        </div>
+      </div>
+      
+      
     </div>
   )
 }

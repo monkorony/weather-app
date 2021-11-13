@@ -1,0 +1,11 @@
+.current-desc {
+  list-style: none;
+  padding: 15px;
+}
+.current-desc li {
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  text-transform: uppercase;
+}

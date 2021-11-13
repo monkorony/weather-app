@@ -1,0 +1,10 @@
+.upcoming-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  color: #444;
+}
+.forecast-items {
+  background: #f3f4f5;
+}

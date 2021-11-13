@@ -20,7 +20,6 @@ const Form = ({
   }
   return (
       <form onSubmit={handleSubmit}>
-        {location}
           <input
               aria-label="location"
               type="text"

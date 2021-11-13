@@ -1,0 +1,33 @@
+.temp div {
+  font-size: 40px;
+  padding-right: 5px;
+}
+.temp img {
+  width: 70px;
+}
+h2 {
+  font-weight: 600;
+  text-align: left;
+}
+h4 {
+  font-size: 18px;
+  text-align: left;
+}
+.current-day {
+  padding: 15px;
+}
+.location {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+.location-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.temp {
+  display: flex;
+  justify-content: center;
+}

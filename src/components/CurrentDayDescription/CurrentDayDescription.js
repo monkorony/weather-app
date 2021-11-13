@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
+import './CurrentDayDescription.css';
 
-const CurrentDayDescription = () => {
+const CurrentDayDescription = ({
+  forecast
+}) => {
+  console.log(forecast)
   return (
     <div>
-      current day description
+      <ul className='current-desc'>
+        {
+          forecast.map((item, index) => (
+            <li key={index} >
+              <div className="name">{item.name}</div>
+              <div className="value">{`${item.value} ${item.unit}`}</div>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   )
 }
